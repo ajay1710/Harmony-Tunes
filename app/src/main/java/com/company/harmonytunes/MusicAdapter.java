@@ -35,9 +35,9 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MusicViewHol
 
     @Override
     public void onBindViewHolder(@NonNull MusicViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        String filePath=list.get(position);
+        final String filePath=list.get(position);
         Log.e("filePath : ",filePath);
-        String title= filePath.substring(filePath.lastIndexOf("/")+1);
+        final String title= filePath.substring(filePath.lastIndexOf("/")+1);
         holder.textViewFileName.setText(title);
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
